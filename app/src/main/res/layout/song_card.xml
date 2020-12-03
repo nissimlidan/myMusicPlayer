@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/background_color">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/songImageIv"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/songImageIv"
+            android:id="@+id/songName"
+            android:text="The song name"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/songImageIv"
+            android:layout_below="@id/songName"
+            android:id="@+id/songLength"
+            android:text="3:05"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/songImageIv"
+            android:layout_below="@id/songLength"
+            android:id="@+id/singerName"
+            android:text="singer name"
+            android:textSize="24sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/my_music_player"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:id="@+id/title"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center||top"
+        android:layout_below="@id/title"
+        android:id="@+id/buttonsLayout">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/previousBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_previous24"
+            app:civ_border_color="@color/colorPrimary"
+            />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/playBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_play24"
+            android:layout_toEndOf="@id/previousBtn"
+            android:layout_marginEnd="8dp"
+            app:civ_border_color="@color/colorPrimary"
+            />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/pauseBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_pause24"
+            android:layout_toEndOf="@id/playBtn"
+            android:layout_marginStart="8dp"
+            app:civ_border_color="@color/colorPrimary"
+            />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/nextBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/pauseBtn"
+            android:src="@drawable/ic_next24"
+            app:civ_border_color="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/songNameTV"
+        android:layout_below="@id/buttonsLayout"
+        android:text="Name of the song"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songRecyler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/songNameTV"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
